@@ -142,7 +142,12 @@
         </ul>
       </section>
     </section>
-    <footer>© <span id="y"></span> Samuel Veer Singh</footer>
+    <footer>
+      <div class="qr">
+        <span>Scan to visit this site</span>
+        <img id="qr" alt="QR code to this website" src="" loading="lazy" />
+      </div>  
+      © <span id="y"></span> Samuel Veer Singh</footer>
   </main>
   <script>
     // Tabs logic with hash routing
@@ -157,6 +162,9 @@
     const start = location.hash && document.querySelector(location.hash) ? location.hash : '#home';
     activate(start);
     document.getElementById('y').textContent = new Date().getFullYear();
+    const url = location.href.replace(/#.*/, '');
+    const img = document.getElementById('qr');
+    if (img) img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=' + encodeURIComponent(url);
   </script>
 </body>
 </html>
