@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Samuel Veer Singh — Personal Site</title>
-  <meta name="description" content="PhD student at Trinity College Dublin. Interests: machine learning, wearable sensor data, clustering, functional data." />
+  <meta name="description" content="Personal website and CV of Samuel Veer Singh (PhD student, Trinity College Dublin)." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>SV</text></svg>">
   <style>
-    :root { --max: 820px; --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#94a3b8; --line:#1f2a44; --accent:#22d3ee; }
-    *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
-    .wrap{max-width:var(--max);margin:10vh auto;padding:24px}
+    :root { --max: 980px; --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#94a3b8; --line:#1f2a44; --accent:#22d3ee; }
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:var(--max);margin:8vh auto;padding:24px}
     .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
     h1{font-size:clamp(28px,5vw,44px);margin:0 0 6px}
     .lead{color:var(--muted);margin-top:0}
@@ -18,11 +19,23 @@
     .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
     .btn{display:inline-block;padding:10px 16px;border-radius:12px;border:1px solid var(--line);text-decoration:none;color:var(--text)}
     .btn.primary{background:linear-gradient(90deg,#06b6d4,#22d3ee);color:#0b1020;font-weight:700;border:none}
-    h2{margin:18px 0 6px}
-    ul{padding-left:18px;margin:10px 0 0}
-    footer{text-align:center;opacity:.7;margin-top:16px;font-size:14px}
-    .pill{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted);margin-right:6px}
     a{color:var(--accent)}
+    /* Tabs */
+    .tabs{display:flex;gap:8px;margin:18px 0 8px;flex-wrap:wrap}
+    .tab{padding:8px 14px;border:1px solid var(--line);border-radius:999px;cursor:pointer;color:var(--muted);user-select:none}
+    .tab.active{background:linear-gradient(90deg,#06b6d4,#22d3ee);color:#0b1020;font-weight:700;border:none}
+    .section{display:none;margin-top:8px}
+    .section.active{display:block}
+    /* CV lists */
+    .cv-list{list-style:none;padding:0;margin:0}
+    .cv-item{padding:14px 0;border-top:1px solid #1a233a}
+    .cv-item:first-child{border-top:none}
+    .cv-role{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+    .cv-role .title{font-weight:700}
+    .cv-role .org{opacity:.9}
+    .cv-meta{color:var(--muted);font-size:14px}
+    .pill{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted);margin-right:6px}
+    footer{text-align:center;opacity:.7;margin-top:16px;font-size:14px}
   </style>
 </head>
 <body>
@@ -33,11 +46,11 @@
         <img class="avatar" src="headshot.jpg" alt="Headshot of Samuel Veer Singh" />
         <div>
           <h1>Samuel Veer Singh</h1>
-          <p class="lead">PhD Student, Trinity College Dublin • Machine Learning &amp; Wearable Sensor Data</p>
+          <p class="lead">PhD Student, Trinity College Dublin • Machine Learning, Functional Data &amp; Clustering</p>
           <div class="buttons">
-            <a class="btn primary" href="https://www.linkedin.com/in/samuel-veer-singh" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            <a class="btn primary" href="https://www.linkedin.com/in/samuel-veer-singh" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn" href="https://github.com/samuelveersingh" target="_blank" rel="noopener">GitHub @samuelveersingh</a>
-            <a class="btn" href="mailto:samuelveersingh@gmail.com ">Email</a>
+            <a class="btn" href="mailto:ssingh9@tcd.ie">Email</a>
           </div>
           <div style="margin-top:10px">
             <span class="pill">Clustering</span>
@@ -48,30 +61,102 @@
         </div>
       </div>
 
-      <h2>About</h2>
-      <p>
-        I’m interested in unsupervised learning for multivariate and manifold functional data. My current work explores clustering methods and representation learning to make sense of long-horizon physiological signals.
-      </p>
+      <!-- Tabs -->
+      <div class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab active" data-target="#home" role="tab" aria-selected="true">Home</button>
+        <button class="tab" data-target="#cv" role="tab" aria-selected="false">CV</button>
+      </div>
 
-      <h2>Projects & Research</h2>
-      <ul>
-        <li><strong>Cluster Analysis of Multi-Variate Functional Data via Non-linear Representations</strong> — methods for grouping long-form sensor signals (heart rate, activity, etc.) modelled as continuous functions of time.</li>
-        <li><strong>Tooling for Wearable Data Pipelines</strong> — cleaning, windowing, and feature extraction for noisy on-body sensors.</li>
-      </ul>
+      <!-- Home -->
+      <section id="home" class="section active" role="tabpanel" aria-labelledby="Home">
+        <h2>About</h2>
+        <p>
+          I’m interested in unsupervised learning for multivariate and manifold functional data. My current work explores clustering methods and representation learning to make sense of long-horizon physiological signals.
+        </p>
 
-      <h2>Publication</h2>
-      <ul>
-        <li><strong>S. Singh, S. Coyle, and M. Zhang. Shape-informed clustering of multi-dimensional functional data via deep functional autoencoders. In Advances in Neural Information Processing Systems (NeurIPS), Curran Associates, Inc., 2025. [CORE A*]</li>
-      </ul>
+        <h2>Highlighted Projects</h2>
+        <ul>
+          <li><strong>Cluster Analysis of Multi-Variate Functional Data via Non-linear Representations</strong> — methods for grouping long-form sensor signals (e.g., heart rate, activity) modeled as continuous functions of time.</li>
+          <li><strong>Wearable Data Pipelines</strong> — cleaning, windowing, and feature extraction for noisy on-body sensors.</li>
+        </ul>
+        <h2>Publication</h2>
+        <ul>
+          <li><strong>S. Singh, S. Coyle, and M. Zhang. Shape-informed clustering of multi-dimensional functional data via deep functional autoencoders. In Advances in Neural Information Processing Systems (NeurIPS), Curran Associates, Inc., 2025. [CORE A*]</li>
+        </ul>
+      </section>
       
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/samuel-veer-singh" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/samuelveersingh" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
+
+      <!-- CV -->
+      <section id="cv" class="section" role="tabpanel" aria-labelledby="CV">
+        <h2>Curriculum Vitae</h2>
+
+        <h3>Work Experience</h3>
+        <ul class="cv-list">
+          <li class="cv-item">
+            <div class="cv-role"><span class="title">Master's Thesis Researcher</span> · <span class="org">Empa — Transport at Nanoscale Interfaces</span></div>
+            <div class="cv-meta">Mar 2021 – Mar 2022 · Dübendorf, Switzerland</div>
+            <ul>
+              <li>Cluster analysis of datasets acquired on quantum devices.</li>
+              <li>PROMOS (DAAD) stipend for the research stay; thesis graded 1.3.</li>
+            </ul>
+          </li>
+          <li class="cv-item">
+            <div class="cv-role"><span class="title">Graduate Research Assistant</span> · <span class="org">RWTH — Institut für Werkstoffe der Elektrotechnik II</span></div>
+            <div class="cv-meta">May 2020 – Mar 2021 · Aachen, Germany</div>
+            <ul>
+              <li>Project on Kinetic Monte‑Carlo simulation of electrochemical metallisation (ECM) cells.</li>
+              <li>Developed a 1‑D compact physical model and a MATLAB App Designer GUI for ECM simulations.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Academia</h3>
+        <ul class="cv-list">
+          <li class="cv-item">
+            <div class="cv-role"><span class="title">Ph.D. (Statistics) — School of Computer Science &amp; Statistics</span> · <span class="org">Trinity College Dublin</span></div>
+            <div class="cv-meta">Sep 2023 – Present · Dublin, Ireland</div>
+            <ul>
+              <li>Research focus: Machine Learning, Functional Data, and Clustering; funded by Research Ireland via the d‑real project.</li>
+              <li>Thesis: <em>Cluster Analysis of Multi‑Variate Functional Data through Non‑linear Representation Learning</em>.</li>
+            </ul>
+          </li>
+          <li class="cv-item">
+            <div class="cv-role"><span class="title">M.Sc. Physics</span> · <span class="org">RWTH Aachen University</span></div>
+            <div class="cv-meta">Oct 2019 – Jul 2022 · Aachen, Germany · Final grade: 1.8</div>
+            <ul>
+              <li>Thesis: <em>An unsupervised model to classify univariate datasets acquired on nanoscale devices</em>.</li>
+              <li> Specialisation in computational physics and deep learning for physics research.</li>
+            </ul>
+          </li>
+          <li class="cv-item">
+            <div class="cv-role"><span class="title">B.Sc. Physics (Hons)</span> · <span class="org">St. Stephen's College</span></div>
+            <div class="cv-meta">Jul 2016 – May 2019 · Delhi, India · Final grade: 1.7</div>
+            <ul>
+              <li>Focus on implementing physical models via computational methods.</li>
+            </ul>
+          </li>
+          <li class="cv-item">
+            <div class="cv-role"><span class="title">Indian School Certificate (ISC)</span> · <span class="org">La Martiniere College</span></div>
+            <div class="cv-meta">Completed May 2015 · Lucknow, India ·</div>
+          </li>
+        </ul>
+      </section>
     </section>
     <footer>© <span id="y"></span> Samuel Veer Singh</footer>
   </main>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script>
+    // Tabs logic with hash routing
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.section');
+    function activate(id){
+      sections.forEach(s=>s.classList.toggle('active', '#'+s.id===id));
+      tabs.forEach(t=>t.classList.toggle('active', t.dataset.target===id));
+      history.replaceState(null, '', id);
+    }
+    tabs.forEach(btn=>btn.addEventListener('click', ()=>activate(btn.dataset.target)));
+    const start = location.hash && document.querySelector(location.hash) ? location.hash : '#home';
+    activate(start);
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
