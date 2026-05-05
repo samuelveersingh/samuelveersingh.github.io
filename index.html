@@ -13,14 +13,14 @@
 
   <style>
     :root{
-      --bg:#fff8ef;
-      --bg-2:#fde8d4;
+      --bg:#ffffff;
+      --bg-2:#f5f5f7;
       --paper:#ffffff;
       --ink:#101326;
       --ink-soft:#3a3f5a;
       --muted:#6b7088;
-      --line:#ecdbc4;
-      --line-soft:#f4e7d6;
+      --line:#e6e6ea;
+      --line-soft:#efeff2;
 
       --coral:#ff5c52;
       --coral-soft:#ffe1dd;
@@ -55,20 +55,15 @@
     h3{font-size:18px;margin:0 0 6px}
     p{margin:0 0 12px;color:var(--ink-soft)}
 
-    /* ---- Decorative blobs ---- */
-    .bg-decor{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-    .blob{position:absolute;filter:blur(60px);opacity:.55;border-radius:50%}
-    .blob.b1{width:520px;height:520px;background:var(--coral);top:-180px;left:-160px;opacity:.35}
-    .blob.b2{width:420px;height:420px;background:var(--teal);top:30%;right:-160px;opacity:.28}
-    .blob.b3{width:380px;height:380px;background:var(--amber);bottom:-160px;left:25%;opacity:.32}
-    .blob.b4{width:300px;height:300px;background:var(--plum);top:65%;left:-120px;opacity:.22}
+    /* ---- Decorative blobs (off — keeping selectors so HTML stays valid) ---- */
+    .bg-decor{display:none}
 
     /* ---- Nav ---- */
     nav.top{
       position:sticky;top:0;z-index:50;
       backdrop-filter:saturate(160%) blur(10px);
       -webkit-backdrop-filter:saturate(160%) blur(10px);
-      background:rgba(255,248,239,.78);
+      background:rgba(255,255,255,.85);
       border-bottom:1px solid var(--line-soft);
     }
     nav.top .inner{
@@ -347,7 +342,7 @@
         <div class="reveal">
           <div class="eyebrow">Hello, world</div>
           <h1>I'm Samuel — building <span class="accent">shape-aware machine learning</span> for time series.</h1>
-          <p class="tagline">PhD researcher at Trinity College Dublin working at the intersection of <b>theoretical machine learning</b>, functional data analysis and wearable health tech. Trained in physics — first in cosmology and astrophysics, then in theoretical solid-state physics and quantum mechanics — and now applying that mathematical grounding to clustering and representation learning for long-horizon physiological signals.</p>
+          <p class="tagline">PhD researcher at Trinity College Dublin working at the intersection of theoretical machine learning, functional data analysis and time-series clustering. Trained in physics — first in cosmology and astrophysics, then in theoretical solid-state physics and quantum mechanics — I now develop methods for clustering and representation learning that work on any long, multivariate, noisy time series, with a current focus on neuroimaging.</p>
 
           <div class="meta">
             <span>
@@ -390,7 +385,7 @@
             <circle cx="14" cy="14" r="3" fill="currentColor"/>
           </svg>
           <div class="portrait-frame">
-            <img src="headshot.jpg" alt="Portrait of Samuel Veer Singh" />
+            <img src="NeurIPS2025.jpg" alt="Samuel Veer Singh at NeurIPS 2025" />
           </div>
           <div class="sticker s1">📊 ML × stats</div>
           <div class="sticker s2">PhD · Year 3</div>
@@ -411,14 +406,14 @@
         <div class="reveal">
           <p>I came to physics through <b>cosmology and astrophysics</b> — the things you fall for as a kid staring at the sky and never quite shake. Through school in Lucknow and a B.Sc. (Hons.) at <a href="https://www.ststephens.edu/" target="_blank" rel="noopener">St. Stephen's College</a> in Delhi, that's where my curiosity lived.</p>
 
-          <p>For my M.Sc. at <a href="https://www.rwth-aachen.de/" target="_blank" rel="noopener">RWTH Aachen</a>, I shifted into <b>theoretical solid-state physics and quantum mechanics</b> — and into the kind of computational work that handles real, noisy data. A research stay at <a href="https://www.empa.ch/" target="_blank" rel="noopener">Empa</a> in Switzerland turned into a thesis on unsupervised classification of measurements from quantum devices, and that's where machine learning quietly took over: not just as a tool, but as a subject in its own right — the math underneath, not only the applications on top.</p>
+          <p>For my M.Sc. at <a href="https://www.rwth-aachen.de/" target="_blank" rel="noopener">RWTH Aachen</a>, I shifted into <b>theoretical solid-state physics and quantum mechanics</b> — and into the kind of computational work that handles real, noisy data. A research stay at <a href="https://www.empa.ch/" target="_blank" rel="noopener">Empa</a> in Switzerland turned into a thesis on unsupervised clustering of measurements from quantum devices, and that's where machine learning quietly took over: not just as a tool, but as a subject in its own right — the math underneath, not only the applications on top.</p>
 
-          <p>Today, I'm a third-year PhD candidate at <a href="https://www.tcd.ie/scss/" target="_blank" rel="noopener">Trinity College Dublin</a>, supervised by <a href="https://www.scss.tcd.ie/Mimi.Zhang/" target="_blank" rel="noopener">Dr. Mimi Zhang</a> and <a href="https://www.tcd.ie/" target="_blank" rel="noopener">Prof. Shirley Coyle</a>, funded by <a href="https://d-real.ie/" target="_blank" rel="noopener">d-real</a> (Research Ireland). My research sits at the meeting point of <b>functional data analysis</b>, <b>deep representation learning</b>, and <b>digital health</b>: I develop clustering methods that treat physiological signals — heart rate, motion, respiration — as continuous functions of time rather than bags of summary statistics. The goal is tools that let clinicians and researchers see structure in long-horizon wearable data without throwing away its temporal soul.</p>
+          <p>Today, I'm a third-year PhD candidate at <a href="https://www.tcd.ie/scss/" target="_blank" rel="noopener">Trinity College Dublin</a>, supervised by <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Dr. Mimi Zhang</a> and funded by <a href="https://d-real.ie/" target="_blank" rel="noopener">d-real</a> (Research Ireland). My research sits at the meeting point of <b>functional data analysis</b>, <b>deep representation learning</b>, and <b>time-series clustering</b>: I develop methods that treat sequences as continuous functions of time, rather than bags of summary statistics, and recover structure from them. The methods are domain-agnostic — anywhere there are long, multivariate, noisy time series. I'm currently focused on <b>neuroimaging</b>; more on the group's work on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</p>
 
           <div class="pill-row">
             <span class="pill coral">📈 Functional data</span>
             <span class="pill blue">🤖 Deep learning</span>
-            <span class="pill teal">⌚ Wearables</span>
+            <span class="pill teal">🧠 Neuroimaging</span>
             <span class="pill amber">🧮 Clustering</span>
             <span class="pill plum">📡 Time series</span>
             <span class="pill">🌌 Cosmology fan</span>
@@ -427,7 +422,7 @@
         </div>
 
         <aside class="quick-facts reveal" aria-label="Quick facts">
-          <div class="fact"><span class="emoji">🇮🇳</span><div><b>Originally from</b><span>Lucknow → Delhi → Aachen → Dublin</span></div></div>
+          <div class="fact"><span class="emoji">🇮🇳</span><div><b>Originally from</b><span>Lucknow → Delhi → Aachen → Zurich → Dublin</span></div></div>
           <div class="fact"><span class="emoji">🎓</span><div><b>Trained as</b><span>Theoretical physicist, now in theoretical ML</span></div></div>
           <div class="fact"><span class="emoji">🗣️</span><div><b>Languages</b><span>English, Hindi, German</span></div></div>
           <div class="fact"><span class="emoji">🚲</span><div><b>Commutes by</b><span>Bike — unless Dublin is doing its worst</span></div></div>
@@ -448,7 +443,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg>
           </div>
           <h3>Functional Data Clustering</h3>
-          <p>How do you group people whose 24-hour heart-rate curves <em>look</em> alike, even when they're sampled at different times and rates? I design clustering methods that respect the smoothness, shape and multivariate structure of functional observations.</p>
+          <p>How do you group time series that <em>look</em> alike — even when they're sampled at different times, different rates, and live in many dimensions? I design clustering methods that respect the smoothness, shape and multivariate structure of functional observations.</p>
         </div>
 
         <div class="card reveal">
@@ -461,10 +456,10 @@
 
         <div class="card reveal">
           <div class="icon-bubble teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M9 7h6M10 12h4M9 16h6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2c-3 3-3 6 0 9 3-3 3-6 0-9z"/><path d="M5 9c0 5 3 9 7 11 4-2 7-6 7-11"/><path d="M9 14c1 1 2 1 3 1s2 0 3-1"/></svg>
           </div>
-          <h3>Wearable Health Pipelines</h3>
-          <p>Real signals are noisy, gappy and full of artefacts. I work on the unglamorous-but-essential plumbing: alignment, windowing, missingness, and feature extraction that don't smuggle assumptions into downstream models.</p>
+          <h3>Currently: Neuroimaging</h3>
+          <p>Extending the framework to <b>fMRI</b> dynamic functional connectivity — clustering patterns of brain-region interaction over time. Joint work with the group at TCD; more on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</p>
         </div>
 
         <div class="card reveal">
@@ -480,7 +475,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
           </div>
           <h3>Long-horizon Time Series</h3>
-          <p>How do we summarise weeks or months of continuous monitoring without collapsing the very dynamics we care about? Hierarchical models and multiscale representations.</p>
+          <p>How do we summarise long, multivariate sequences without collapsing the very dynamics we care about? Hierarchical models and multiscale representations.</p>
         </div>
 
         <div class="card reveal">
@@ -530,10 +525,6 @@
             <b>NeurIPS 2025 — Poster.</b> <em>Shape-Informed Clustering of Multi-Dimensional Functional Data via Deep Functional Autoencoders (FAEclust).</em> Friday 5 Dec, 11:00&nbsp;AM – 2:00&nbsp;PM PST · San Diego, USA. <span class="pill coral" style="margin-left:6px">Main conference</span>
           </div>
         </li>
-        <li>
-          <div class="year">TBD</div>
-          <div><b>Add your talks here</b> — invited seminars, workshops, internal group talks, conferences. Tell me the title, venue, and date.</div>
-        </li>
       </ul>
     </section>
 
@@ -546,16 +537,24 @@
           <div class="icon-bubble blue">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 10v6"/><path d="M6 9v5c3 2 9 2 12 0V9"/></svg>
           </div>
-          <h3>Teaching Assistant — TCD</h3>
+          <h3>Teaching Assistant &amp; Demonstrator — Trinity College Dublin</h3>
           <div class="cv-meta">2023 – present · School of Computer Science &amp; Statistics</div>
-          <p style="margin-top:10px"><em>Add the modules you've TA'd here</em> — e.g., Statistical Methods, Machine Learning, Probability. Include level (UG/PG) and any responsibilities (labs, tutorials, marking, project supervision).</p>
+          <p style="margin-top:10px">Tutorials, labs and demonstrating across postgraduate and undergraduate modules:</p>
+          <ul style="margin:6px 0 0;padding-left:18px;color:var(--ink-soft);font-size:14px">
+            <li><b>CS7CS4</b> — Machine Learning</li>
+            <li><b>CS7DS2</b> — Optimisation for Machine Learning</li>
+            <li><b>CS7NS1</b> — Scalable Computing</li>
+            <li><b>CSU33061</b> — Artificial Intelligence I</li>
+            <li><b>STU34507</b> — Statistical Inference I</li>
+            <li><b>STU22004</b> — Applied Probability I</li>
+          </ul>
         </div>
         <div class="card reveal">
           <div class="icon-bubble teal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12 12 0 01.84 4.422 12 12 0 01-7 10.9 12 12 0 01-7-10.9 12 12 0 01.84-4.422L12 14z"/></svg>
           </div>
           <h3>Mentoring &amp; supervision</h3>
-          <p style="margin-top:10px"><em>Add students mentored, summer projects supervised, reading groups led, etc.</em></p>
+          <p style="margin-top:10px">Supervised an undergraduate thesis on <em>Benchmarking Dynamic Functional Connectivity Estimation Methods for fMRI Data</em>.</p>
         </div>
       </div>
     </section>
@@ -566,12 +565,12 @@
       <h2>Behind the scenes.</h2>
       <ul class="pub-list" style="margin-top:18px">
         <li>
-          <div class="year">2025</div>
-          <div><b>Reviewer</b> — <em>add venues here</em> (e.g., NeurIPS workshops, ICML, AISTATS, journal reviewing).</div>
+          <div class="year">·</div>
+          <div><b>Reviewer</b> — NeurIPS.</div>
         </li>
         <li>
-          <div class="year">2024</div>
-          <div><b>Organising / committee work</b> — <em>add any reading groups, seminar series, student societies, EDI work, etc.</em></div>
+          <div class="year">·</div>
+          <div><b>PhD representative</b> — <a href="https://d-real.ie/" target="_blank" rel="noopener">d-real</a> (Research Ireland Centre for Research Training in Digitally-Enhanced Reality).</div>
         </li>
       </ul>
     </section>
@@ -590,8 +589,8 @@
           <div class="text"><span class="tag t-award">Accepted</span> <b>NeurIPS 2025</b> — paper accepted to the main conference (CORE A*). 🎉</div>
         </div>
         <div class="news-item reveal">
-          <div class="date">2024</div>
-          <div class="text"><span class="tag t-life">Milestone</span> Began writing the second thesis chapter on multivariate functional clustering.</div>
+          <div class="date">Aug 2025</div>
+          <div class="text"><span class="tag t-life">New direction</span> Started a new project on <b>neuroimaging</b> — extending shape-aware clustering to fMRI dynamic functional connectivity. More on the group's work on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</div>
         </div>
         <div class="news-item reveal">
           <div class="date">Sep 2023</div>
@@ -680,7 +679,7 @@
               <div class="cv-meta">Oct 2019 – Jul 2022 · Aachen, Germany · Final grade 1.8</div>
               <ul>
                 <li>Specialised in <b>theoretical solid-state physics and quantum mechanics</b>, with computational and machine-learning methods for physics research.</li>
-                <li>Thesis: <em>An unsupervised model to classify univariate datasets acquired on nanoscale devices.</em></li>
+                <li>Thesis: <em>An unsupervised model to cluster univariate datasets acquired on nanoscale devices.</em></li>
               </ul>
             </div>
             <div class="cv-item teal reveal">
@@ -710,11 +709,11 @@
               </ul>
             </div>
             <div class="cv-item coral reveal">
-              <div class="cv-role"><span class="title">Graduate Research Assistant</span><span class="org">· RWTH — Institut für Werkstoffe der Elektrotechnik II</span></div>
+              <div class="cv-role"><span class="title">HiWi (Student Research Assistant)</span><span class="org">· RWTH — Institut für Werkstoffe der Elektrotechnik II</span></div>
               <div class="cv-meta">May 2020 – Mar 2021 · Aachen, Germany</div>
               <ul>
-                <li>Project on Kinetic Monte-Carlo simulation of electrochemical metallisation (ECM) cells.</li>
-                <li>Developed a 1-D compact physical model and a MATLAB App Designer GUI for ECM simulations.</li>
+                <li>Computational physics — Kinetic Monte-Carlo simulation of electrochemical metallisation (ECM) cells.</li>
+                <li>More on <a href="https://www.linkedin.com/in/samuel-veer-singh" target="_blank" rel="noopener">LinkedIn</a>.</li>
               </ul>
             </div>
           </div>
