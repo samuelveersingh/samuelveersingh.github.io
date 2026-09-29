@@ -201,7 +201,12 @@
       box-shadow:0 8px 20px rgba(255,92,82,.4);
     }
     .feature .body{padding:28px}
-    .feature .venue{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:10px}
+    .pub-card{padding:28px}
+    .pub-card h3{font-size:22px;margin-bottom:10px}
+    .pub-card .authors{font-size:14px;color:var(--ink-soft);margin-bottom:14px}
+    .pub-card .authors b{color:var(--ink)}
+    .pub-card .pill{font-family:'Inter',sans-serif;letter-spacing:0;text-transform:none}
+    .feature .venue,.pub-card .venue{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:10px}
     .feature h3{font-size:22px;margin-bottom:10px}
     .feature .authors{font-size:14px;color:var(--ink-soft);margin-bottom:14px}
     .feature .authors b{color:var(--ink)}
@@ -286,7 +291,6 @@
     .contact-card .qr img{display:block;width:120px;height:120px}
 
     footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:13px;border-top:1px dashed var(--line);margin-top:24px}
-    footer .heart{color:var(--coral)}
 
     /* ---- Reveal animation ---- */
     .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease, transform .7s ease}
@@ -377,9 +381,13 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.91 1.65-1.85 3.39-1.85 3.62 0 4.29 2.38 4.29 5.48v6.26zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
               LinkedIn
             </a>
-            <a class="btn" href="https://scholar.google.com/citations?user=" target="_blank" rel="noopener">
+            <a class="btn" href="https://scholar.google.com/citations?user=CCFnqxQAAAAJ&amp;hl=en" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>
               Scholar
+            </a>
+            <a class="btn" href="https://orcid.org/0009-0005-7185-3603" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+              ORCID
             </a>
           </div>
         </div>
@@ -393,7 +401,7 @@
             <img src="NeurIPS2025.jpg" alt="Samuel Veer Singh at NeurIPS 2025" />
           </div>
           <div class="sticker s1">📊 ML × stats</div>
-          <div class="sticker s2">PhD · Year 3</div>
+          <div class="sticker s2">PhD · Year 4</div>
           <div class="sticker s3">NeurIPS 2025</div>
           <svg class="doodle d2" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
             <circle cx="50" cy="50" r="30" stroke-dasharray="4 6"/>
@@ -409,11 +417,11 @@
       <h2>Trained in physics, working in machine learning — and still curious about most things in between.</h2>
       <div class="about-grid" style="margin-top:18px">
         <div class="reveal">
-          <p>I came to physics through <b>cosmology and astrophysics</b> — the things you fall for as a kid staring at the sky and never quite shake. Through school in Lucknow and a B.Sc. (Hons.) in Physics at <a href="https://www.ststephens.edu/" target="_blank" rel="noopener">St. Stephen's College</a> in Delhi, that's where my curiosity lived.</p>
+          <p>I came to physics through <b>cosmology and astrophysics</b> — the things you fall for as a kid staring at the sky and never quite shake. Through school in Lucknow and a B.Sc. (Hons.) at <a href="https://www.ststephens.edu/" target="_blank" rel="noopener">St. Stephen's College</a> in Delhi, that's where my curiosity lived.</p>
 
           <p>For my M.Sc. at <a href="https://www.rwth-aachen.de/" target="_blank" rel="noopener">RWTH Aachen</a>, I shifted into <b>theoretical solid-state physics and quantum mechanics</b> — and into the kind of computational work that handles real, noisy data. A research stay at <a href="https://www.empa.ch/" target="_blank" rel="noopener">Empa</a> in Switzerland turned into a thesis on unsupervised clustering of measurements from quantum devices, and that's where machine learning quietly took over: not just as a tool, but as a subject in its own right — the math underneath, not only the applications on top.</p>
 
-          <p>Today, I'm a third-year PhD candidate at <a href="https://www.tcd.ie/scss/" target="_blank" rel="noopener">Trinity College Dublin</a>, supervised by <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Dr. Mimi Zhang</a> and funded by <a href="https://d-real.ie/" target="_blank" rel="noopener">d-real</a> (Research Ireland). My research sits at the meeting point of <b>functional data analysis</b>, <b>deep representation learning</b>, and <b>time-series clustering</b>: I develop methods that treat sequences as continuous functions of time, rather than bags of summary statistics, and recover structure from them. The methods are domain-agnostic — anywhere there are long, multivariate, noisy time series. I'm currently focused on <b>neuroimaging</b>; more on the group's work on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</p>
+          <p>Today, I'm a fourth-year PhD candidate at <a href="https://www.tcd.ie/scss/" target="_blank" rel="noopener">Trinity College Dublin</a>, supervised by <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Dr. Mimi Zhang</a> and funded by <a href="https://d-real.ie/" target="_blank" rel="noopener">d-real</a> (Research Ireland). My research sits at the meeting point of <b>functional data analysis</b>, <b>deep representation learning</b>, and <b>time-series clustering</b>: I develop methods that treat sequences as continuous functions of time, rather than bags of summary statistics, and recover structure from them. The methods are domain-agnostic — anywhere there are long, multivariate, noisy time series. I'm currently focused on <b>neuroimaging</b>; more on the group's work on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</p>
 
           <div class="pill-row">
             <span class="pill coral">📈 Functional data</span>
@@ -421,8 +429,8 @@
             <span class="pill teal">🧠 Neuroimaging</span>
             <span class="pill amber">🧮 Clustering</span>
             <span class="pill plum">📡 Time series</span>
-            <span class="pill">🌌 Cosmology</span>
-            <span class="pill">⚛️ Quantum Mechanics</span>
+            <span class="pill">🌌 Cosmology fan</span>
+            <span class="pill">⚛️ ex-quantum</span>
           </div>
         </div>
 
@@ -456,7 +464,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
           </div>
           <h3>Deep Functional Autoencoders</h3>
-          <p>Learning low-dimensional representations of curves that are <em>shape-aware</em>: small nudges in the latent space correspond to interpretable changes in the underlying signal. The substrate of my NeurIPS 2025 work.</p>
+          <p>Learning low-dimensional representations of curves that are <em>shape-aware</em>: small nudges in the latent space correspond to interpretable changes in the underlying signal. The substrate of my NeurIPS 2025 work (<b>FAEclust</b>) and of <b>MatFAE</b>, its extension to matrix-valued trajectories.</p>
         </div>
 
         <div class="card reveal">
@@ -464,7 +472,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2c-3 3-3 6 0 9 3-3 3-6 0-9z"/><path d="M5 9c0 5 3 9 7 11 4-2 7-6 7-11"/><path d="M9 14c1 1 2 1 3 1s2 0 3-1"/></svg>
           </div>
           <h3>Currently: Neuroimaging</h3>
-          <p>Extending the framework to <b>fMRI</b> dynamic functional connectivity — clustering patterns of brain-region interaction over time. Joint work with the group at TCD; more on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</p>
+          <p>Extending the framework to <b>fMRI</b> dynamic functional connectivity — learning from trajectories of symmetric positive definite matrices that describe brain-region interaction over time (see the <a href="https://arxiv.org/abs/2609.30487" target="_blank" rel="noopener">MatFAE pre-print</a>). Joint work with the group at TCD; more on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</p>
         </div>
 
         <div class="card reveal">
@@ -495,7 +503,7 @@
 
     <!-- ============== PUBLICATIONS ============== -->
     <section class="block" id="publications">
-      <div class="eyebrow">Publication</div>
+      <div class="eyebrow">Publications</div>
       <h2>Out in the world.</h2>
 
       <div class="feature reveal" style="margin-top:24px">
@@ -516,6 +524,50 @@
         </div>
       </div>
 
+      <h3 style="margin-top:40px;font-size:22px">Pre-prints</h3>
+      <div class="card pub-card reveal" style="margin-top:14px">
+        <div class="venue">MatFAE · arXiv:2609.30487 · Sep 2026 <span class="pill amber" style="margin-left:6px">Pre-print · under review</span></div>
+        <h3>Geometric Feature Learning for Functional Data Valued on the Symmetric Positive Definite Manifold</h3>
+        <p class="authors"><b>Samuel V. Singh</b>, Mimi Zhang &nbsp;·&nbsp; cs.LG, stat.ML</p>
+        <p>We develop <b>MatFAE</b>, a functional neural network for learning trajectories on the Riemannian manifold of symmetric positive definite (SPD) matrices. Intrinsic layers map manifold-valued functions to Euclidean vector-valued functions, and a functional layer projects them into a finite-dimensional Euclidean space. Because each sequence is treated as a continuous function, the latent representations can encode trajectory dynamics, while the functional weights reveal which regions of the input contribute most. Applied to a range of fMRI datasets, MatFAE efficiently learns informative representations from high-dimensional SPD trajectories.</p>
+        <div class="cta-row" style="margin-top:14px">
+          <a class="btn" href="https://arxiv.org/abs/2609.30487" target="_blank" rel="noopener">arXiv</a>
+          <a class="btn" href="https://arxiv.org/pdf/2609.30487" target="_blank" rel="noopener">PDF</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============== NEWS ============== -->
+    <section class="block" id="news">
+      <div class="eyebrow">News</div>
+      <h2>Recent updates.</h2>
+      <div class="news" style="margin-top:24px">
+        <div class="news-item reveal">
+          <div class="date">1 Oct 2026</div>
+          <div class="text"><span class="tag t-talk">Talk</span> Giving a seminar, <b>Learning from trajectories of positive-definite matrices</b>, at the <b>TCD SIS Seminar Series</b>. <a href="https://sites.google.com/view/tcdsisseminars/abstracts/samuel" target="_blank" rel="noopener">Abstract</a>.</div>
+        </div>
+        <div class="news-item reveal">
+          <div class="date">24 Sep 2026</div>
+          <div class="text"><span class="tag t-pub">Pre-print</span> New pre-print on arXiv (under review): <b>MatFAE</b> — <em>Geometric Feature Learning for Functional Data Valued on the Symmetric Positive Definite Manifold</em>, with Mimi Zhang. <a href="https://arxiv.org/abs/2609.30487" target="_blank" rel="noopener">arXiv:2609.30487</a>.</div>
+        </div>
+        <div class="news-item reveal">
+          <div class="date">5 Dec 2025</div>
+          <div class="text"><span class="tag t-pub">Paper</span> Presented <b>FAEclust</b> at <b>NeurIPS 2025</b> in San Diego (poster session, 11&nbsp;AM – 2&nbsp;PM PST). <a href="https://openreview.net/forum?id=5mpQO0YpTv" target="_blank" rel="noopener">OpenReview</a> · <a href="https://github.com/samuelveersingh/FAEclust" target="_blank" rel="noopener">code</a>.</div>
+        </div>
+        <div class="news-item reveal">
+          <div class="date">Sep 2025</div>
+          <div class="text"><span class="tag t-award">Accepted</span> <b>NeurIPS 2025</b> — paper accepted to the main conference (CORE A*). 🎉</div>
+        </div>
+        <div class="news-item reveal">
+          <div class="date">Aug 2025</div>
+          <div class="text"><span class="tag t-life">New direction</span> Started a new project on <b>neuroimaging</b> — extending shape-aware clustering to fMRI dynamic functional connectivity. More on the group's work on <a href="https://www.scss.tcd.ie/mimi.zhang/" target="_blank" rel="noopener">Mimi Zhang's website</a>.</div>
+        </div>
+        <div class="news-item reveal">
+          <div class="date">Sep 2023</div>
+          <div class="text"><span class="tag t-life">New chapter</span> Started my <b>PhD in Statistics</b> at Trinity College Dublin, funded by Research Ireland via the <a href="https://d-real.ie/" target="_blank" rel="noopener">d-real</a> programme.</div>
+        </div>
+      </div>
     </section>
 
     <!-- ============== CONTACT (on Home) ============== -->
@@ -538,9 +590,13 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.94 10.94 0 015.74 0c2.19-1.48 3.15-1.17 3.15-1.17.62 1.57.23 2.73.11 3.02.74.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
               GitHub
             </a>
-            <a href="https://scholar.google.com/citations?user=" target="_blank" rel="noopener">
+            <a href="https://scholar.google.com/citations?user=CCFnqxQAAAAJ&amp;hl=en" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>
               Scholar
+            </a>
+            <a href="https://orcid.org/0009-0005-7185-3603" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+              ORCID
             </a>
           </div>
         </div>
@@ -561,6 +617,12 @@
       <h2>On stage (and by the poster).</h2>
       <p style="max-width:65ch">A selection of recent and upcoming presentations.</p>
       <ul class="pub-list" style="margin-top:18px">
+        <li>
+          <div class="year">2026</div>
+          <div>
+            <b>TCD SIS Seminar Series — Seminar.</b> <em>Learning from trajectories of positive-definite matrices.</em> Thursday 1 Oct · O'Reilly Institute, Trinity College Dublin. Based on the <a href="https://arxiv.org/abs/2609.30487" target="_blank" rel="noopener">MatFAE pre-print</a> · <a href="https://sites.google.com/view/tcdsisseminars/abstracts/samuel" target="_blank" rel="noopener">abstract</a>. <span class="pill blue" style="margin-left:6px">Upcoming</span>
+          </div>
+        </li>
         <li>
           <div class="year">2025</div>
           <div>
